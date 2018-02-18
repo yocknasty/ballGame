@@ -5,9 +5,11 @@ const float PlayerSpeed = 100.f;
 Game::Game()
     :mWindow(sf::VideoMode(640, 480), "ball game"), mPlayer()
     {
-        mPlayer.setRadius(40.f);
+        if(!mTexture.loadFromFile("/home/ajyockey/Projects/sfml_projects/Eagle.png"))
+            std::cout << "****************Can't Load image******************";
+        mPlayer.setTexture(mTexture);
         mPlayer.setPosition(100.f, 100.f);
-        mPlayer.setFillColor(sf::Color::Red);
+       
         bool isMovingUp(false);
         bool isMovingDown(false);
         bool isMovingLeft(false);

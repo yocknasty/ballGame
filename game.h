@@ -1,7 +1,7 @@
 #ifndef BALL_GAME_H
 #define BALL_GAME_H
 #include <SFML/Graphics.hpp>
-
+#include <iostream>
 
 class Game 
 {
@@ -16,8 +16,12 @@ class Game
     private:
         
         sf::RenderWindow mWindow;
-        sf::CircleShape mPlayer;
-        
+        sf::Sprite mPlayer;
+        sf::Texture mTexture;
+        bool isMovingUp;
+        bool isMovingDown;
+        bool isMovingLeft;
+        bool isMovingRight;
         
 
 };
