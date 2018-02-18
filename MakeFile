@@ -1,14 +1,14 @@
-LIBS=-lsfml-graphics -lsfml-window -lsfml-system
+
 
 all: game
 
-game.o: game.cpp 
+game.o: game.cpp game.h
 	@echo "***compiling game.cpp***"
 	g++ -c game.cpp 
 
 game: game.o 
 	@echo "***Creating Executable*****"
-	g++ game.o -o game $(LIBS)
+	g++ game.o -o game -lsfml-graphics -lsfml-window -lsfml-system
 
 clean: 
 	@echo "*****Cleaning game*****"
