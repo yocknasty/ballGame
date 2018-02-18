@@ -5,7 +5,7 @@ const float PlayerSpeed = 100.f;
 Game::Game()
     :mWindow(sf::VideoMode(640, 480), "ball game"), mPlayer()
     {
-        if(!mTexture.loadFromFile("/home/ajyockey/Projects/sfml_projects/Eagle.png"))
+        if(!mTexture.loadFromFile("/home/ajyockey/Projects/sfml_projects/assests/Eagle.png"))
             std::cout << "****************Can't Load image******************";
         mPlayer.setTexture(mTexture);
         mPlayer.setPosition(100.f, 100.f);
