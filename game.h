@@ -2,6 +2,7 @@
 #define BALL_GAME_H
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <memory>
 
 class Game 
 {
